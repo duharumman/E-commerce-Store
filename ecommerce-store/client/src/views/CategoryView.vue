@@ -1,5 +1,5 @@
 <template>
-  <!-- Task 3: call the ProductCategory component here -->
+  <ProductsCategory :category="$route.params.slug"/>
 </template>
 
 <script>

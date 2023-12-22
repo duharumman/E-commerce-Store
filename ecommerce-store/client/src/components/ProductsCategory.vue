@@ -65,11 +65,16 @@ export default {
     };
   },
   methods: {
-  //Task 2: Write the function getProducts() here
+    async getProducts(){
+      const categoryName = "";
+      const response = await fetch(`https://fakestoreapi.com/products/category/${this.category}`); 
+      const data = await response.json();
+      this.products = data;
+    }
   },
   created() {
     this.link = `/category/${this.category}`;
-  //Task 2: Write call for function here
+    this.getProducts();
   },
 };
 </script>

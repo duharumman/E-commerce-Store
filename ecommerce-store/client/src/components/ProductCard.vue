@@ -5,9 +5,8 @@
       {{ product.title }}
     </p>
     <p class="mb-16 text-center text-2xl">${{ product.price }}</p>
-    <!--Task 4: call addToCart function from cartStore in the click event below -->
     <button
-      @click=""
+      @click="cartStore.addToCart(product)"
       class="absolute bottom-4 left-1/2 -translate-x-1/2 rounded bg-blue-600 py-1 px-2 uppercase text-white"
     >
       Add to Cart
